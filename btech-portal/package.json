@@ -1,0 +1,25 @@
+{
+  "name": "btech-portal",
+  "version": "1.0.0",
+  "description": "BTech Portal for Students and Admins",
+  "main": "backend/app.js",
+  "scripts": {
+    "start": "node backend/app.js",
+    "test": "jest"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "body-parser": "^1.19.0",
+    "mongoose": "^5.10.9",
+    "multer": "^1.4.2",
+    "jsonwebtoken": "^8.5.1",
+    "bcryptjs": "^2.4.3"
+  },
+  "devDependencies": {
+    "jest": "^26.6.3",
+    "supertest": "^6.0.1"
+  },
+  "author": "",
+  "license": "ISC",
+  "keywords": []
+}

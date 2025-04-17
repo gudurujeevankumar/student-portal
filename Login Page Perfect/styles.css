@@ -1,0 +1,241 @@
+/* Import Tailwind CSS base, components, and utilities */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Define custom CSS variables for colors */
+:root {
+  --primary-color: #6d28d9; /* Main purple color */
+  --primary-hover: #5b21b6; /* Darker purple for hover states */
+  --background-start: #7c3aed; /* Gradient start color */
+  --background-end: #2563eb; /* Gradient end color */
+}
+
+/* Reset body styles and set default font */
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, sans-serif; /* Use system fonts */
+}
+
+/* Center the login container and apply a gradient background */
+.login-container {
+  min-height: 100vh; /* Full viewport height */
+  display: flex; /* Flexbox for centering */
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  padding: 1rem; /* Add padding */
+  background: linear-gradient(135deg, var(--background-start), var(--background-end)); /* Gradient background */
+}
+
+/* Style the login card */
+.login-card {
+  max-width: 24rem; /* Limit width */
+  width: 100%; /* Full width for smaller screens */
+  background: white; /* White background */
+  border-radius: 1rem; /* Rounded corners */
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); /* Subtle shadow */
+  padding: 2rem; /* Inner padding */
+}
+
+/* Style the login header */
+.login-header {
+  text-align: center; /* Center text */
+  margin-bottom: 2rem; /* Add spacing below */
+}
+
+.logo-circle {
+  width: 4rem; /* Circle size */
+  height: 4rem; /* Circle size */
+  background-color: #f3e8ff; /* Light purple background */
+  border-radius: 50%; /* Make it circular */
+  display: flex; /* Flexbox for centering */
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  margin: 0 auto 1rem; /* Center and add spacing below */
+}
+
+.login-icon {
+  color: var(--primary-color); /* Use primary color */
+}
+
+.login-header h1 {
+  margin: 0 0 0.5rem; /* Add spacing below */
+  font-size: 1.875rem; /* Large font size */
+  font-weight: 700; /* Bold text */
+  color: #111827; /* Dark text color */
+}
+
+.login-header p {
+  margin: 0; /* Remove margin */
+  color: #6b7280; /* Gray text color */
+}
+
+/* Style the login form */
+.login-form {
+  display: flex; /* Flexbox layout */
+  flex-direction: column; /* Stack items vertically */
+  gap: 1rem; /* Add spacing between items */
+}
+
+/* Style form groups */
+.form-group {
+  display: flex; /* Flexbox layout */
+  flex-direction: column; /* Stack items vertically */
+  gap: 0.5rem; /* Add spacing between items */
+}
+
+.form-group label {
+  font-size: 0.875rem; /* Small font size */
+  font-weight: 500; /* Medium font weight */
+  color: #374151; /* Dark gray text color */
+}
+
+/* Style input fields with icons */
+.input-with-icon {
+  position: relative; /* Position relative for icon placement */
+}
+
+.input-icon {
+  position: absolute; /* Position icon absolutely */
+  left: 0.75rem; /* Add left spacing */
+  top: 50%; /* Center vertically */
+  transform: translateY(-50%); /* Adjust vertical alignment */
+  color: #9ca3af; /* Gray icon color */
+}
+
+.input-with-icon input {
+  width: 100%; /* Full width */
+  padding: 0.5rem 0.75rem 0.5rem 2.5rem; /* Add padding */
+  border: 1px solid #d1d5db; /* Light gray border */
+  border-radius: 0.5rem; /* Rounded corners */
+  font-size: 0.875rem; /* Small font size */
+  outline: none; /* Remove outline */
+  box-sizing: border-box; /* Include padding and border in width/height */
+}
+
+.input-with-icon input:focus {
+  border-color: var(--primary-color); /* Highlight border on focus */
+  box-shadow: 0 0 0 2px rgba(109, 40, 217, 0.2); /* Add focus shadow */
+}
+
+/* Style form options */
+.form-options {
+  display: flex; /* Flexbox layout */
+  justify-content: space-between; /* Space items apart */
+  align-items: center; /* Center items vertically */
+}
+
+.remember-me {
+  display: flex; /* Flexbox layout */
+  align-items: center; /* Center items vertically */
+  gap: 0.5rem; /* Add spacing between items */
+  font-size: 0.875rem; /* Small font size */
+  color: #374151; /* Dark gray text color */
+}
+
+.forgot-password {
+  font-size: 0.875rem; /* Small font size */
+  color: var(--primary-color); /* Use primary color */
+  text-decoration: none; /* Remove underline */
+  font-weight: 500; /* Medium font weight */
+}
+
+.forgot-password:hover {
+  color: var(--primary-hover); /* Darker purple on hover */
+}
+
+/* Style the login button */
+.login-button {
+  width: 100%; /* Full width */
+  padding: 0.625rem; /* Add padding */
+  background-color: var(--primary-color); /* Use primary color */
+  color: white; /* White text */
+  border: none; /* Remove border */
+  border-radius: 0.5rem; /* Rounded corners */
+  font-weight: 500; /* Medium font weight */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.2s; /* Smooth hover effect */
+}
+
+/* Change background color on hover */
+.login-button:hover {
+  background-color: var(--primary-hover); /* Darker purple */
+}
+
+/* Style the divider */
+.divider {
+  position: relative; /* Position relative for pseudo-elements */
+  text-align: center; /* Center text */
+  margin: 1.5rem 0; /* Add spacing above and below */
+}
+
+.divider::before,
+.divider::after {
+  content: ""; /* Empty content for lines */
+  position: absolute; /* Position absolutely */
+  top: 50%; /* Center vertically */
+  width: calc(50% - 4rem); /* Adjust width */
+  height: 1px; /* Thin line */
+  background-color: #e5e7eb; /* Light gray color */
+}
+
+.divider::before {
+  left: 0; /* Align to the left */
+}
+
+.divider::after {
+  right: 0; /* Align to the right */
+}
+
+.divider span {
+  background-color: white; /* White background */
+  padding: 0 1rem; /* Add horizontal padding */
+  color: #6b7280; /* Gray text color */
+  font-size: 0.875rem; /* Small font size */
+}
+
+/* Style the GitHub button */
+.github-button {
+  width: 100%; /* Full width */
+  padding: 0.625rem; /* Add padding */
+  background-color: white; /* White background */
+  border: 1px solid #d1d5db; /* Light gray border */
+  border-radius: 0.5rem; /* Rounded corners */
+  display: flex; /* Flexbox layout */
+  align-items: center; /* Center items vertically */
+  justify-content: center; /* Center items horizontally */
+  gap: 0.5rem; /* Add spacing between items */
+  font-size: 0.875rem; /* Small font size */
+  color: #374151; /* Dark gray text color */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.2s; /* Smooth hover effect */
+}
+
+.github-button:hover {
+  background-color: #f9fafb; /* Light gray background on hover */
+}
+
+/* Style the signup link */
+.signup-link {
+  text-align: center; /* Center text */
+  margin: 1.5rem 0 0; /* Add spacing above */
+  font-size: 0.875rem; /* Small font size */
+  color: #6b7280; /* Gray text color */
+}
+
+.signup-link a {
+  color: var(--primary-color); /* Use primary color */
+  text-decoration: none; /* Remove underline */
+  font-weight: 500; /* Medium font weight */
+}
+
+.signup-link a:hover {
+  color: var(--primary-hover); /* Darker purple on hover */
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 640px) {
+  .login-card {
+    padding: 1.5rem; /* Reduce padding */
+  }
+}
