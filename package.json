@@ -1,9 +1,9 @@
 {
   "name": "student-portal",
   "version": "1.0.0",
-  "main": "server/app.js",
+  "main": "app.js",
   "scripts": {
-    "start": "node server/app.js"
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
