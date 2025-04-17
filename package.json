@@ -1,0 +1,27 @@
+{
+  "name": "student-portal",
+  "version": "1.0.0",
+  "main": "server/app.js",
+  "scripts": {
+    "start": "node server/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gudurujeevankumar/student-portal.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gudurujeevankumar/student-portal/issues"
+  },
+  "homepage": "https://github.com/gudurujeevankumar/student-portal#readme",
+  "description": "",
+  "dependencies": {
+    "express": "^4.18.2",
+    "body-parser": "^1.20.2",
+    "mongoose": "^7.0.3",
+    "dotenv": "^16.0.3",
+    "multer": "^1.4.5-lts.1"
+  }
+}
